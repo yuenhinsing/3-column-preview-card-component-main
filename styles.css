@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    /* primary colors */
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+  
+    /* paragraphs */
+    --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  
+    /* background, headings, buttons */
+    --veryLightGray: hsl(0, 0%, 95%);
+  }
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: "Lexend Deca", "sans-serif";
+  }
+  
+  .container {
+    display: flex;
+    max-width: 1200px;
+    border-radius: 20px;
+    margin: 2em 2em;
+  }
+  
+  .container-sedans {
+    background-color: var(--brightOrange);
+    border-radius: 10px 0 0 10px;
+  }
+  .container-suvs {
+    background-color: var(--darkCyan);
+  }
+  .container-luxury {
+    background-color: var(--veryDarkCyan);
+    border-radius: 0 10px 10px 0;
+  }
+
+  .container-sedans,
+  .container-suvs,
+  .container-luxury {
+    padding: 50px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--veryLightGray);
+    font-family: "Big Shoulders Display";
+    padding: 30px 0;
+  }
+
+p {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--transparentWhite);
+    padding: 15px 30% 60px 0;
+  }
+  
+a {
+    background-color: var(--veryLightGray);
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+.container-sedans > a {
+    color: var(--brightOrange);
+  }
+  
+.container-suvs > a {
+    color: var(--darkCyan);
+  }
+.container-luxury > a {
+    color: var(--veryDarkCyan);
+  }
+
+a:hover {
+    color: var(--veryLightGray);
+    border: 1px solid var(--veryLightGray);
+    cursor: pointer;
+  }
+  
+.container-sedans > a:hover {
+    background-color: var(--brightOrange);
+  }
+
+.container-suvs > a:hover {
+    background-color: var(--darkCyan);
+  }
+
+.container-luxury > a:hover {
+    background-color: var(--veryDarkCyan);
+  }
+  
+@media only screen and (max-width: 600px) {
+.card {
+    flex-direction: column;
+}
+.container-sedans {
+    border-radius: 10px 10px 0 0;
+}
+.container-luxury {
+    border-radius: 0 0 10px 10px;
+}
+}
